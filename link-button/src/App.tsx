@@ -1,9 +1,8 @@
 import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { isPropertySignature } from 'typescript';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
@@ -13,7 +12,7 @@ function App() {
           ))}
         </ul>
         <div className="App">
-          <Child  />
+          <Child message="親コンポーネントより記述" />
         </div>
         <LinkButton />
       </header>
@@ -45,10 +44,15 @@ const items: Item[] = [
   }
 ]
 
-function Child(){
+type Props = {
+  message: string
+}
+
+const Child: React.FC<Props> = props => {
   return (
     <div>
       <p>これは子コンポーネントです。</p>
+      <p>{ props.message }</p>
     </div>
   )
 }
