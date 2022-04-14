@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Child from './child'
 import logo from './logo.svg';
 import './App.css';
 
@@ -12,7 +13,8 @@ const App: React.FC = () => {
           ))}
         </ul>
         <div className="App">
-          <Child message="親コンポーネントより記述" />
+          <Child message="親コンポーネントより記述"  number="1">子コンポーネント</Child>
+          <Child message="親コンポーネントより記述"  number="2">子コンポーネント</Child>
         </div>
         <LinkButton />
       </header>
@@ -44,16 +46,5 @@ const items: Item[] = [
   }
 ]
 
-type Props = {
-  message: string
-}
 
-const Child: React.FC<Props> = props => {
-  return (
-    <div>
-      <p>これは子コンポーネントです。</p>
-      <p>{ props.message }</p>
-    </div>
-  )
-}
 export default App;
