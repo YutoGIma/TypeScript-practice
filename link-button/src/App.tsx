@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Child from './child'
+import Input from './input'
 import logo from './logo.svg';
 import './App.css';
 
@@ -16,6 +17,7 @@ const App: React.FC = () => {
           <Child message="親コンポーネントより記述"  number="1">子コンポーネント</Child>
           <Child message="親コンポーネントより記述"  number="2">子コンポーネント</Child>
         </div>
+        <Input children="料理"></Input>
         <LinkButton />
       </header>
     </div>

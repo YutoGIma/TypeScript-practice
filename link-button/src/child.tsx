@@ -7,13 +7,13 @@ children: React.ReactNode
 }
 
 const Child: React.FC<Props> = ({message, number, children}) => {
-return (
-    <div>
-    <p>これは子コンポーネントです。</p>
-    <p>{ message }</p>
-    <p>{ number }の{ children }</p>
-    </div>
-)
+    return (
+        <div>
+        <p>これは子コンポーネントです。</p>
+        <p>{ message }</p>
+        <p>{ number }の{ children }</p>
+        </div>
+    )
 }
 
 
