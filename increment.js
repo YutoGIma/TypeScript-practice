@@ -1,3 +1,5 @@
+//コンパイル
+// tsc increment.ts
 function increment(num) {
     return num + 2;
 }
@@ -13,3 +15,22 @@ var x = 1;
 //プリミティブ型をまるでオブジェクトのように扱えるのはJavaScriptの特徴
 console.log("name".length);
 //4
+// プリミティブ型の種類
+// プリミティブ型は次の7つがあります。
+// 論理型(boolean): trueまたはfalseの真偽値。
+// 数値型(number): 0や0.1のような数値。
+// 文字列型(string): "Hello World"のような文字列。
+// undefined型: 値が未定義であることを表す型。
+// ヌル型(null): 値がないことを表す型。
+// シンボル型(symbol): 一意で不変の値。
+// bigint型: 9007199254740992nのようなnumber型では扱えない大きな整数型。
+// 上のプリミティブ型以外は、JavaScriptにおいてはすべてオブジェクトと考えて問題ない
+//論理型
+var isOk = true;
+if (isOk) {
+    console.log("isOk is true");
+}
+// 三項演算子
+var age = 20;
+var drink = age >= 20 ? "ビール" : "ジュース";
+console.log(drink);
