@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Child from './child'
 import Input from './input'
+import RouteTest from './routeTest'
 import logo from './logo.svg';
 import './App.css';
 
@@ -20,6 +22,11 @@ const App: React.FC = () => {
         <Input children="料理"></Input>
         <LinkButton />
       </header>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/router" element={<RouteTest />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
