@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 import Child from './child'
 import Input from './input'
 import RouteTest from './routeTest'
@@ -25,6 +25,9 @@ const App: React.FC = () => {
             <Route path="/" element={<LinkButton />} />
             <Route path="/router" element={<RouteTest />} />
           </Routes>
+          <Link to="/">Home</Link>
+          <Link to="/input">Input</Link>
+          <Link to="/router">Router</Link>
         </BrowserRouter>
       </header>
     </div>
