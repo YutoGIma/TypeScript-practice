@@ -19,14 +19,14 @@ const App: React.FC = () => {
           <Child message="親コンポーネントより記述"  number="1">子コンポーネント</Child>
           <Child message="親コンポーネントより記述"  number="2">子コンポーネント</Child>
         </div>
-        <Input children="料理"></Input>
-        <LinkButton />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/input" element={<Input children={"料理"} />} />
+            <Route path="/" element={<LinkButton />} />
+            <Route path="/router" element={<RouteTest />} />
+          </Routes>
+        </BrowserRouter>
       </header>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/router" element={<RouteTest />} />
-        </Routes>
-      </BrowserRouter>
     </div>
   );
 }
