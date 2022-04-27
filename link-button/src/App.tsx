@@ -39,7 +39,18 @@ function LinkButton() {
   const handlClick = () => {
     setCount(count + 1);
   }
-  return <span className='likeButton' onClick={handlClick}>💛{count}</span>
+  let over =""
+  if (count > 1020){
+    over = "1020Likeを超えました。"
+  }else if(count > 1000){
+    over = "1000Likeを超えました。"
+  }
+  return(
+    <div>
+      <span className='likeButton' onClick={handlClick}>💛{count}</span>
+      <p>{over}</p>
+    </div>
+  ) 
 }
 
 type Item = {
