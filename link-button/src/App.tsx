@@ -19,16 +19,9 @@ const App: React.FC = () => {
           <Child message="親コンポーネントより記述"  number="1">子コンポーネント</Child>
           <Child message="親コンポーネントより記述"  number="2">子コンポーネント</Child>
         </div>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/input" element={<Input children={"料理"} />} />
-            <Route path="/" element={<LinkButton />} />
-            <Route path="/router" element={<RouteTest />} />
-          </Routes>
-          <Link to="/">Home</Link>
-          <Link to="/input">Input</Link>
-          <Link to="/router">Router</Link>
-        </BrowserRouter>
+        <Input children={"料理"} />
+        <LinkButton />
+        <RouteTest />
       </header>
     </div>
   );
