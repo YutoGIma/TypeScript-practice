@@ -30,7 +30,15 @@ var isOk = true;
 if (isOk) {
     console.log("isOk is true");
 }
-// 三項演算子
-var age = 20;
-var drink = age >= 20 ? "ビール" : "ジュース";
-console.log(drink);
+// オブジェクト型の定義
+var user = {
+    name: "taro",
+    age: 22
+};
+console.log(user.name);
+console.log(user.age);
+// union型
+var nameOrAge = "taro";
+nameOrAge = 12;
+console.log(nameOrAge.toString().length);
+console.log(nameOrAge);

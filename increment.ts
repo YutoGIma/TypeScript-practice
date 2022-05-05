@@ -41,7 +41,16 @@ if(isOk){
   console.log("isOk is true")
 }
 
-// 三項演算子
-const age = 20;
-const drink = age >= 20 ? "ビール" : "ジュース";
-console.log(drink);
+// オブジェクト型の定義
+const user:{name:string,age:number} = {
+  name:"taro",
+  age:22,
+}
+console.log(user.name)
+console.log(user.age)
+
+// union型
+let nameOrAge: string | number = "taro"
+nameOrAge = 12
+console.log(nameOrAge.toString().length)
+console.log(nameOrAge)
