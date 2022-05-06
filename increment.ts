@@ -54,3 +54,27 @@ let nameOrAge: string | number = "taro"
 nameOrAge = 12
 console.log(nameOrAge.toString().length)
 console.log(nameOrAge)
+
+// 文字列リテラル
+let myName : "Yuto" | "Gima"
+myName = "Yuto"
+// myNamae = "jas"
+console.log(myName)
+
+// 文字列インデクサ
+const abc: {[code: number]: string} = {
+  1: "one",
+  2: "two",
+  3: "three"
+}
+abc[4] = "four"
+console.log(abc)
+
+type numbersKey = "0" | "1" | "2"
+const numbersList: {[key in numbersKey]: string} = {
+  "0": "zero",
+  "1": "ichi",
+  "2": "ni"
+}
+//numbersKeyのものをすべて利用しないといけない（増やすことも減らすこともできない）
+

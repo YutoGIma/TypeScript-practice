@@ -42,3 +42,16 @@ var nameOrAge = "taro";
 nameOrAge = 12;
 console.log(nameOrAge.toString().length);
 console.log(nameOrAge);
+// 文字列リテラル
+var myName;
+myName = "Yuto";
+// myNamae = "jas"
+console.log(myName);
+// 文字列インデクサ
+var abc = {
+    1: "one",
+    2: "two",
+    3: "three"
+};
+abc[4] = "four";
+console.log(abc);
