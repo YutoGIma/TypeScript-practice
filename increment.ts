@@ -78,3 +78,10 @@ const numbersList: {[key in numbersKey]: string} = {
 }
 //numbersKeyのものをすべて利用しないといけない（増やすことも減らすこともできない）
 
+// タプル型
+const tuple = (message: string):[Date, string] => {
+  return [new Date(), `S:${message}`]
+}
+const [date, message] = tuple("test")
+// console.log(date)
+console.log(message)

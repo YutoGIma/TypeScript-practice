@@ -55,3 +55,16 @@ var abc = {
 };
 abc[4] = "four";
 console.log(abc);
+var numbersList = {
+    "0": "zero",
+    "1": "ichi",
+    "2": "ni"
+};
+//numbersKeyのものをすべて利用しないといけない（増やすことも減らすこともできない）
+// タプル型
+var tuple = function (message) {
+    return [new Date(), "S:".concat(message)];
+};
+var _a = tuple("test"), date = _a[0], message = _a[1];
+// console.log(date)
+console.log(message);
