@@ -68,3 +68,4 @@ var tuple = function (message) {
 var _a = tuple("test"), date = _a[0], message = _a[1];
 // console.log(date)
 console.log(message);
+// {name?: string, age?: string}になる

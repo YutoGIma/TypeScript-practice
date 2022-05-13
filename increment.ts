@@ -85,3 +85,17 @@ const tuple = (message: string):[Date, string] => {
 const [date, message] = tuple("test")
 // console.log(date)
 console.log(message)
+
+// utilityType
+type userType = {
+  name: string
+  age: number
+}
+
+// Omitは指定したプロパティの削除
+type Ageonly = Omit<userType, "name">
+// Ageonlyは{age: number}のみ
+
+// Partialは全てのプロパティがOptionalになる
+type PartiaUser = Partial<userType>
+// {name?: string, age?: string}になる
