@@ -6,8 +6,8 @@ const Home: React.FC = () => {
         <main>
             <div id="home">
                 <div className="" id="menu">
-                    <p>menu1</p>
-                    <p>menu2</p>
+                    <a href="/practiceApp">練習</a>
+                    <a href="/post">投稿</a>
                     <p>menu3</p>
                     <p>menu4</p>
                     <p>menu5</p>
