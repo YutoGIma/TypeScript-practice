@@ -26,3 +26,4 @@ Things you may want to cover:
 # 参考資料
 
 https://www.tohoho-web.com/ex/rails.html
+https://zenn.dev/tatsurom/articles/2b92156e509d9e27f81b
