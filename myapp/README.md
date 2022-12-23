@@ -22,3 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# 参考資料
+
+https://www.tohoho-web.com/ex/rails.html
