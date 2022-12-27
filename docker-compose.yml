@@ -1,0 +1,44 @@
+version: '3'
+# docker-composeの書式のバージョンを指定します。(原則、最新を指定する)
+
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+    ports:
+      - "3309:5432"
+    volumes:
+      - /myapp/temp/:/docker-entrypoint-initdb.d
+
+  backend:
+    build: 
+      context: ./myapp
+      dockerfile: Dockerfile
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3004 -b '0.0.0.0'"
+    volumes:
+      - ./myapp/:/myapp/
+    ports:
+      - 3004:3004
+    depends_on:
+      - db
+    environment:
+      - "SELENIUM_DRIVER_URL=http://selenium_chrome:4444/wd/hub"
+
+  frontend:
+    build:
+      context: ./link-button
+      dockerfile: Dockerfile
+    volumes:
+      - ./link-button/:/link-button/
+    ports:
+      - "3005:3000"
+    tty: true
+    extra_hosts:                  
+      - localhost:172.18.0.1
+
+  selenium_chrome:
+    image: selenium/standalone-chrome-debug
+    logging:
+      driver: none
